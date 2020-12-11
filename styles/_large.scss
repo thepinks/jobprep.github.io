@@ -1,0 +1,71 @@
+@import './variables';
+
+header {
+    width: 53rem;
+}
+
+nav {
+    width: 53rem;
+    div {
+        width: 15%;
+    }
+}
+
+.hero {
+    width: 53rem;
+}
+
+.black-wrap {
+    width: 53rem;
+}
+.black-1 {
+    width: 75%;
+}
+.black-2 {
+    width: 25%;
+}
+
+.more-about {
+    width: 53rem;
+}
+.more-wrap {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    div {
+        p {
+            font-size: 10pt;
+        }
+    }
+}
+.bottom {
+    width: 53rem;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "infra tech ad" 
+        "live live ad";
+    div {
+        p {
+            font-size: 10pt;
+        }
+    }
+}
+.growth-btn {
+    width: 150px;
+    height: 30px;
+}
+.growth-text {
+    font-size: 10pt;
+}
+
+footer {
+    .clients {
+        width: 53rem;
+    }
+    .footer {
+        justify-content: center;
+        p {
+            width: 53rem;
+        }
+    }
+}

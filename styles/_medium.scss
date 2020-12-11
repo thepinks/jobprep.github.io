@@ -1,0 +1,60 @@
+@import './variables';
+
+nav {
+    justify-content: flex-end;
+    div {
+        width: 20%;
+    }
+}
+
+.heroSm {
+    display: none;
+}
+.heroLg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.black-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.black-1 {
+    width: 60%;
+}
+.black-2 {
+    width: 30%;
+    text-align: right;
+    .black-p-lg {
+        display: initial;
+        color: white;
+        font-family: $font;
+    }
+    .black-p-sm {
+        display: none;
+    }
+}
+
+.more-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.bottom {
+    width: 95% ;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "infra tech" 
+        "live ad";
+}
+
+footer {
+    .clients {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+}

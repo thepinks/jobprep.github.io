@@ -1,0 +1,259 @@
+@import './variables';
+
+/* Prevent adjustments of font size when orientation changes  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* apply a natural box layout model to all elements */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    padding-top: 20px;
+    border-bottom: solid 1px $third;
+    img {
+        margin-left: 10px;
+    }
+}
+
+nav {
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+        p {
+            font-family: $font;
+        }
+    }
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero {
+    width: 100%;
+    margin-bottom: -4px;
+    padding: 0;
+}
+.heroSm {
+    width: 100%;
+    height: auto;
+}
+.heroLg {
+    display: none;
+}
+
+.black-section {
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.black-wrap {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.black-1 {
+    width: 100%;
+    h2 {
+        color: $second;
+        font-family: $font;
+    }
+    p {
+        color: white;
+        font-family: $font;
+    }
+    ul {
+        li {
+            color: white;
+            font-family: $font;
+        }
+    }
+}
+.black-2 {
+    width: 100%;
+    h2 {
+        color: $second;
+        font-family: $font;
+    }
+    .black-p-sm {
+        color: white;
+        font-family: $font;
+    }
+    .black-p-lg {
+        display: none;
+    }
+}
+
+.more-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid 1px $third;
+    h1 {
+        width: 95%;
+        text-align: left;
+        color: $prime;
+        font-family: $font;
+        margin: 40px 0px 20px 0px;
+        border-bottom: solid 1px $third;
+    }
+}
+.more-wrap {
+    width: 95%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    div {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        h3 {
+            color: $prime;
+            font-family: $font;
+            margin: 10px 0px 0px 0px;
+        }
+        p {
+            font-family: $font;
+            margin: 10px 0px 20px 0px;
+        }
+    }
+}
+
+.bottom {
+    width: 95% ;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+        "infra" 
+        "tech" 
+        "ad" 
+        "live";
+    margin-top: 30px;
+    div {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        h3 {
+            color: $prime;
+            font-family: $font;
+        }
+        p {
+            font-family: $font;
+        }
+    }
+}
+#infra {
+    grid-area: infra;
+}
+#tech {
+    grid-area: tech;
+}
+#live {
+    grid-area: live;
+}
+#ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border: solid 1px $third;
+    border-radius: 5px;
+    grid-area: ad;
+}
+.growth {
+    margin-top: 3px;
+}
+
+.growth-btn {
+    width: 50%;
+    height: 40px;
+    color: white;
+    background: $prime;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-family: $font;
+    &:hover {
+        background: darken($prime, 10%);
+    }
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .clients {
+        width: 90%;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .footer {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(0deg, darken($prime, 15%) 0%, $prime 100%);
+        p {
+            color: white;
+            font-family: $font;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
